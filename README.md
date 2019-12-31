@@ -7,5 +7,5 @@ To do:
 
 
 what next:
-- Adding a dirb module to the script for domain brute forcing
+- Adding a dirb module to ro brute force directories and files within website
 - adding nikto module to scan for web vulnerabilities
