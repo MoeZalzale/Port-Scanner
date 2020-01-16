@@ -1,6 +1,24 @@
 #!/usr/bin/python3
 
 import nmap
+import subprocess
+import os
+
+class menu:
+    def start(self):
+        choice = input("""what tool would you like to use\n
+        1) nmap scan
+        2) gobuster
+        3) nikto\n""")
+        
+        if choice=='1':
+            nmap_scanner = scanner()
+            nmap_scanner.start()
+        elif choice == '2':
+            website = input("what is the website\n")
+            print(f'using go buster on {website}')
+            command = f'echo gobuster dir -w dirlist.txt {website}'
+            subprocess.run(command.split(' '))
 
 class scanner:
 
@@ -63,5 +81,5 @@ class scanner:
         self.get_scan_type()
         self.scan()
 
-test = scanner()
-test.start()
+menu = menu()
+menu.start()
