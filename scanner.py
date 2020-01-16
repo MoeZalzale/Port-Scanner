@@ -17,7 +17,7 @@ class menu:
         elif choice == '2':
             website = input("what is the website\n")
             print(f'using go buster on {website}')
-            command = f'echo gobuster dir -w dirlist.txt {website}'
+            command = f'gobuster dir -w dirlist.txt {website}'
             subprocess.run(command.split(' '))
 
 class scanner:
